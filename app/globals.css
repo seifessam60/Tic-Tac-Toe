@@ -1,42 +1,37 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
+*{
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+.container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  .gameBoard{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    .square{
+      height: 100px;
+      width: 100px;
+      border: 2px solid black;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cross,.circle{
+        font-size: 80px;
+        font-weight: bold;
+      }
+      .cross{
+        color: red;
+      }
+      .circle{
+        color: blue;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+      }
+    }
   }
 }
